@@ -1,4 +1,4 @@
-class BitOperationExercise{
+class BitOperationExercise {
     public static void main(String[] args) {
         int num1 = 10;
         int num2 = 20;
@@ -23,6 +23,15 @@ class BitOperationExercise{
         num1 = num1 - num2;
         System.out.println(num1);
         System.out.println(num2);
+
+        //第2题
+        int i1 = 60;
+        int i2 = i1 & 15;
+        String j = (i2 > 9) ? (char) (i2 - 10 + 'A') + "" : i2 + "";
+        int temp = i1 >>> 4;
+        i2 = temp & 15;
+        String k = (i2 > 9) ? (char) (i2 - 10 + 'A') + "" : i2 + "";
+        System.out.println(k + "" + j);
 
     }
 }
