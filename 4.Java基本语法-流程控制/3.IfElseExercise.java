@@ -52,9 +52,9 @@ class IfElseExercise {
         if (x > 2)
             if (y > 2)
                 System.out.println(x + y);
-            System.out.println("anti");
-        else
-            System.out.println("x is " + x);
+                //System.out.println("anti");
+            else
+                System.out.println("x is " + x);
 
         // 第4题
         boolean b = true;
@@ -71,5 +71,47 @@ class IfElseExercise {
         //执行结果
         // case ==: b
         // cse =: c
+
+        //3.4 第1题
+        Scanner scan3 = new Scanner(System.in);
+        System.out.print("请输入第1个数字: ");
+        int num4 = scan3.nextInt();
+        System.out.print("请输入第2个数字: ");
+        int num5 = scan3.nextInt();
+        int sum = num4 + num5;
+        if (sum >= 50) {
+            System.out.println("hello world!");
+        } else {
+            System.out.println("sum: " + sum);
+        }
+
+        //3.4 第2题
+        Scanner scan4 = new Scanner(System.in);
+        System.out.print("请输入第1个数字: ");
+        double d1 = scan4.nextDouble();
+        System.out.print("请输入第2个数字: ");
+        double d2 = scan4.nextDouble();
+        double sum1 = d1 + d2;
+        double mul = d1 * d2;
+        if(d1 > 10.0 && d2 < 20.0){
+            System.out.println("和是" + sum1);
+        }else{
+            System.out.println("乘积是:" + mul);
+        }
+
+
+        //3.4 第3题
+        Scanner scan5 = new Scanner(System.in);
+        System.out.print("您家狗狗多大了: ");
+        int dogAge = scan5.nextInt();
+        if(dogAge > 2){
+            int result = (dogAge - 2) * 4 + 21;
+            System.out.println("您家的狗狗相当于人" + result + "岁");
+        }else if (dogAge > 0){
+            double result = dogAge * 10.5;
+            System.out.println("您家的狗狗相当于人" + result + "岁");
+        }else{
+            System.out.println("狗狗的年龄必须大于0岁哦~");
+        }
     }
 }
