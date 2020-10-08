@@ -93,9 +93,9 @@ class IfElseExercise {
         double d2 = scan4.nextDouble();
         double sum1 = d1 + d2;
         double mul = d1 * d2;
-        if(d1 > 10.0 && d2 < 20.0){
+        if (d1 > 10.0 && d2 < 20.0) {
             System.out.println("和是" + sum1);
-        }else{
+        } else {
             System.out.println("乘积是:" + mul);
         }
 
@@ -104,14 +104,47 @@ class IfElseExercise {
         Scanner scan5 = new Scanner(System.in);
         System.out.print("您家狗狗多大了: ");
         int dogAge = scan5.nextInt();
-        if(dogAge > 2){
+        if (dogAge > 2) {
             int result = (dogAge - 2) * 4 + 21;
             System.out.println("您家的狗狗相当于人" + result + "岁");
-        }else if (dogAge > 0){
+        } else if (dogAge > 0) {
             double result = dogAge * 10.5;
             System.out.println("您家的狗狗相当于人" + result + "岁");
-        }else{
+        } else {
             System.out.println("狗狗的年龄必须大于0岁哦~");
+        }
+
+        //3.5
+        int luckyNum = (int) (Math.random() * 90 + 10);
+        int luckyOne = luckyNum / 10;
+        int luckyTwo = luckyNum % 10;
+        System.out.println(luckyNum);
+
+
+        Scanner scan6 = new Scanner(System.in);
+        System.out.print("请输入一个两位数: ");
+        int userNum = scan6.nextInt();
+        int userOne = userNum / 10;
+        int userTwo = userNum % 10;
+
+        if(userNum < 10){
+            System.out.println("输入有误，请输入2位数~");
+        }else{
+            // 正式的逻辑
+            if(userOne==luckyOne && userTwo == luckyTwo){
+                System.out.println("奖金10000美元");
+            }else if(userOne==luckyTwo && userTwo==luckyOne){
+                System.out.println("奖金3000美元");
+            }else if(userOne==luckyOne || userTwo == luckyTwo){
+                System.out.println("奖金1000美元");
+
+            }else if(userOne==luckyTwo || userTwo == luckyOne){
+                System.out.println("奖金500美元");
+
+            }else{
+                System.out.println("感谢您为福利彩票做贡献!");
+
+            }
         }
     }
 }
