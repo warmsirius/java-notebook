@@ -44,5 +44,21 @@ class NestedCycleExercise {
 
         }
 
+        //方法三: 使用带标签的for循环
+        label:
+        for (int i = 2; i < 100; i++) {
+            boolean isPrimeNumber = true;
+            for (int j = 2; j <= Math.sqrt(i); j++) {
+                if (i % j == 0) {
+                    isPrimeNumber = false;
+                    continue label;
+                }
+            }
+            if (isPrimeNumber) {
+                System.out.println(i);
+            }
+
+        }
+
     }
 }
